@@ -11,6 +11,8 @@ class AgentState(TypedDict):
 
 
 def processor(state: AgentState) -> AgentState:
+    """This is a method that handles multiple input state"""
+
     if state["operation"] == "*":
         state["result"] = (
             f"Hello {state['name']} your result is {math.prod(state['values'])}"
